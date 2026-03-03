@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Mulch Hydroseeding</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'><rect width='80' height='80' rx='14' fill='%2300897B'/><path d='M40 16 Q58 24 58 42 Q58 58 40 64 Q22 58 22 42 Q22 24 40 16Z' fill='white'/><line x1='40' y1='22' x2='40' y2='62' stroke='%2300897B' stroke-width='2' stroke-linecap='round' opacity='0.5'/></svg>">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -16,6 +17,9 @@
             font-family: 'Poppins', sans-serif;
             background: #ffffff;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         /* Hero */
@@ -24,7 +28,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            min-height: 60vh;
+            flex: 1;
             text-align: center;
             padding: 3rem 1rem 2rem;
         }
@@ -33,6 +37,7 @@
             color: #2e7d32;
             font-size: 4rem;
             font-weight: 700;
+            margin-top: 1.2rem;
         }
 
         .hero p {
@@ -47,7 +52,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 2rem 1rem 4rem;
+            padding: 2rem 1rem 3rem;
         }
 
         .contact h2 {
@@ -80,7 +85,7 @@
 
         form input:focus,
         form textarea:focus {
-            border-color: #2e7d32;
+            border-color: #00897B;
         }
 
         form textarea {
@@ -90,7 +95,7 @@
 
         form button {
             padding: 0.8rem;
-            background: #2e7d32;
+            background: #00897B;
             color: #fff;
             border: none;
             border-radius: 8px;
@@ -102,13 +107,13 @@
         }
 
         form button:hover {
-            background: #1b5e20;
+            background: #00695C;
         }
 
         .divider {
             width: 60px;
             height: 3px;
-            background: #2e7d32;
+            background: #00897B;
             border-radius: 2px;
             margin: 0 auto 2rem;
         }
@@ -116,19 +121,44 @@
         .success {
             display: none;
             text-align: center;
-            color: #2e7d32;
+            color: #00897B;
             font-size: 1rem;
             padding: 1rem;
-            border: 1.5px solid #2e7d32;
+            border: 1.5px solid #00897B;
             border-radius: 8px;
             max-width: 480px;
             width: 100%;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 1rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .copyright {
+            color: #aaa;
+            font-size: 0.72rem;
+            font-family: 'Poppins', sans-serif;
+            letter-spacing: 0.03em;
         }
     </style>
 </head>
 <body>
 
     <div class="hero">
+        <!-- Teal block logo -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80" width="80" height="80">
+            <rect width="80" height="80" rx="14" fill="#00897B"/>
+            <path d="M40 16 Q58 24 58 42 Q58 58 40 64 Q22 58 22 42 Q22 24 40 16Z" fill="white"/>
+            <line x1="40" y1="64" x2="40" y2="70" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="40" y1="22" x2="40" y2="62" stroke="#00897B" stroke-width="2" stroke-linecap="round" opacity="0.45"/>
+        </svg>
+
         <h1>green mulch</h1>
         <p>hydroseeding</p>
     </div>
@@ -145,6 +175,26 @@
         </form>
         <div class="success" id="success-msg">thank you! we'll be in touch soon.</div>
     </div>
+
+    <footer>
+        <p class="copyright">© | 2026 | green mulch</p>
+
+        <!-- South African flag -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 600" width="48" height="32" style="border-radius:3px;display:block">
+            <!-- Red top half -->
+            <rect width="900" height="300" fill="#DE3831"/>
+            <!-- Blue bottom half -->
+            <rect y="300" width="900" height="300" fill="#002395"/>
+            <!-- White pall (border around green) -->
+            <polygon points="0,0 0,600 900,425 900,175" fill="white"/>
+            <!-- Green pall -->
+            <polygon points="0,0 0,600 900,400 900,200" fill="#007A4D"/>
+            <!-- Gold/yellow (border between black and green) -->
+            <polygon points="0,0 0,600 362,300" fill="#FFB612"/>
+            <!-- Black triangle -->
+            <polygon points="0,0 0,600 300,300" fill="#000000"/>
+        </svg>
+    </footer>
 
     <script>
         const form = document.getElementById('contact-form');
